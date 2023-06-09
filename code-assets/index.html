@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submit</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fill out the details to win a prize!</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form class="form-group row row-cols-1" id="form">
+                <div class="form-div col">
+                    <label for="user-first-name"><img id="firstName-img" class="img-status" src="empty.png">Your first name</label>
+                    <input type="text" id="user-first-name" name="user-first-name" required>
+                </div>
+                <div class="form-div col">
+                    <label for="user-last-name"><img id="lastName-img" class="img-status" src="empty.png">Your last name</label>
+                    <input type="text" id="user-last-name" name="user-last-name" required>
+                </div>
+                <div class="form-div col">
+                    <label for="user-email"><img id="email-img" class="img-status" src="empty.png">Your email</label>
+                    <input type="email" id="user-email" name="user-email" required>
+                </div>
+                <div class="form-div col">
+                    <label for="user-pwd"><img id="pwd-img" class="img-status" src="empty.png">New password</label>
+                    <input type="password" id="user-pwd" name="user-pwd" required>
+                </div>
+                <div class="form-div col">
+                    <label for="user-pwd-check"><img id="pwd-check-img" class="img-status" src="empty.png">Repeat password</label>
+                    <input type="password" id="user-pwd-check" name="user-pwd-check" required>
+                </div>
+                <div class="form-btn d-flex justify-content-center align-items-center">
+                    <!-- change the type of button to type="submit" if want to submit the form
+                        it's set to type="button" so it doesn't auto submit the form on click (causes page refresh)-->
+                    <button id="myBtn" type="submit" name="Submit">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>Make sure your details are correct!</h2>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
