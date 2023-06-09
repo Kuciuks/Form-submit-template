@@ -33,10 +33,40 @@ document.getElementById('form').addEventListener('submit',(event)=>{
     event.preventDefault();
 
     displayMessage();
+    setInterval(() => {
+        location.reload();
+    }, 3000);
 })
 
+
+
 function displayMessage(){
-    console.log(document.getElementsByName('body'))
+    
+    let div = document.createElement('div');
+    div.style.position = 'absolute';
+    div.style.left = 'calc(50% - 350px / 2)'
+    div.style.top = 'calc(50% - 115px / 2)'
+    div.style.width = '350px';
+    div.style.height = '115px';
+    div.style.backgroundColor = 'var(--primary)'
+    div.style.border = '2px solid black';
+    div.style.boxShadow = '0 0 25px rgb(25,200,111) inset'
+    div.style.display = 'flex';
+    div.style.justifyContent = 'center';
+    div.style.alignItems = 'center'
+    div.setAttribute('class','popOut')
+
+
+    let h1 = document.createElement('p');
+    h1.innerText = 'Congratulations!!! \nYou won the jackpot!!!'
+    h1.style.textAlign = 'center'
+    h1.style.fontFamily = 'system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif'
+    h1.style.fontSize = '30px'
+    h1.style.color = 'var(--secondary)'
+    h1.style.margin = '0px'
+    
+    div.appendChild(h1)
+    document.getElementById('form').appendChild(div)
 }
 
 function validateData(input){
@@ -46,7 +76,7 @@ function validateData(input){
             if(input.value.match(/^[A-Za-z\s]+$/)){
                 document.getElementById('firstName-img').setAttribute('src','success.png');
                 fillStatus.firstName = true;
-            }else if(input.value == ""){
+            }else if(input.value == ''){
                 document.getElementById('firstName-img').setAttribute('src','empty.png');
                 fillStatus.firstName = false;
             }else{
@@ -58,7 +88,7 @@ function validateData(input){
             if(input.value.match(/^[A-Za-z\s]+$/)){
                 document.getElementById('lastName-img').setAttribute('src','success.png');
                 fillStatus.lastName = true;
-            }else if(input.value == ""){
+            }else if(input.value == ''){
                 document.getElementById('lastName-img').setAttribute('src','empty.png');
                 fillStatus.lastName = false;
             }else{
@@ -70,7 +100,7 @@ function validateData(input){
             if(input.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
                 document.getElementById('email-img').setAttribute('src','success.png');
                 fillStatus.email = true;
-            }else if(input.value == ""){
+            }else if(input.value == ''){
                 document.getElementById('email-img').setAttribute('src','empty.png');
                 fillStatus.email = false;
             }else{
@@ -133,4 +163,5 @@ function formSubmit(){
 
     let jsonObj = JSON.stringify(userDetails)
     console.log(jsonObj)
+
 }
