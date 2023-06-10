@@ -109,16 +109,25 @@ function validateData(input){
             }
             break;
         case 'user-pwd':
-            if(input.value == userPwdCheckInput.value){
-                document.getElementById('pwd-img').setAttribute('src','success.png');
+            if(input.value == '' && userPwdCheckInput.value == ''){
+                document.getElementById('pwd-check-img').setAttribute('src','empty.png');
+                fillStatus.password = false;
+            }
+            else if(input.value == userPwdCheckInput.value){
+                document.getElementById('pwd-check-img').setAttribute('src','success.png');
+                fillStatus.password = true;
             }else{
-                document.getElementById('pwd-img').setAttribute('src','wrong.png');
+                document.getElementById('pwd-check-img').setAttribute('src','wrong.png');
+                fillStatus.password = false;
             }
             break;
         case 'user-pwd-check':
-            if(input.value == userPwdInput.value){
+            if(input.value == '' && userPwdInput.value == ''){
+                document.getElementById('pwd-check-img').setAttribute('src','empty.png');
+                fillStatus.password = false;
+            }
+            else if(input.value == userPwdInput.value){
                 document.getElementById('pwd-check-img').setAttribute('src','success.png');
-                document.getElementById('pwd-img').setAttribute('src','success.png');
                 fillStatus.password = true;
             }else{
                 document.getElementById('pwd-check-img').setAttribute('src','wrong.png');
@@ -137,7 +146,7 @@ function validateData(input){
         document.getElementById('myBtn').classList.add('fade-in');
     }
 }
-formControl()
+
 function formControl(){
     for(prop of Object.entries(fillStatus)){
         if(prop[1] == true){

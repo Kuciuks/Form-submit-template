@@ -40,7 +40,7 @@
 @media(max-width: 330px){
     form{
         width: 290px !important;
-        height: 340px !important;
+        height: 330px !important;
     }
 
     button{
@@ -95,8 +95,12 @@ button{
     border-style: 2px solid black;
     box-shadow: 0 0 10px var(--secondary);
     background-color: var(--third);
-    opacity: 1;
+    opacity: 0;
     transition: opacity 2s linear
+}
+
+#pwd-img{
+    opacity: 0;
 }
 .fade-in{
     opacity: 1;
