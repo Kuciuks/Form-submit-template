@@ -12,6 +12,56 @@
     --fourth: #F1C376;
 }
 
+
+@media(max-width: 430px){
+    form{
+        width: 320px !important;
+        height: 370px !important;
+    }
+
+    button{
+        width: 75px !important;
+        height: 35px !important;
+        font-size: 10px !important;
+    }
+
+    label{
+        font-size: 14px !important; 
+    }
+
+    input{
+        height: 25px !important;
+    }
+
+    .img-status{
+        width: 20px !important;
+    }
+}
+@media(max-width: 330px){
+    form{
+        width: 290px !important;
+        height: 340px !important;
+    }
+
+    button{
+        width: 50px !important;
+        height: 25px !important;
+        font-size: 8px !important;
+    }
+
+    label{
+        font-size: 12px !important; 
+    }
+
+    input{
+        height: 20px !important;
+    }
+
+    .img-status{
+        width: 20px !important;
+    }
+}
+
 html{
     width: 100vw;
     height: 100vh;
@@ -45,7 +95,7 @@ button{
     border-style: 2px solid black;
     box-shadow: 0 0 10px var(--secondary);
     background-color: var(--third);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 2s linear
 }
 .fade-in{
@@ -95,3 +145,4 @@ input{
         box-shadow: 0 0 25px rgb(25,200,111) inset;
     }
 }
+
