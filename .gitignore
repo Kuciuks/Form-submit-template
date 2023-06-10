@@ -4,6 +4,9 @@ node_modules/
 # Ignore npm package lock file
 package-lock.json
 
+# Ignore npm package file
+package.json
+
 # Ignore IDE or editor-specific files
 .vscode/
 .idea/
